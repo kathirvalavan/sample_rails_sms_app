@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   rescue_from CustomErrors::AuthenticationFailed, with: :render_nothing_error
   rescue_from CustomErrors::DefaultError, with: :render_default_error
+  rescue_from Exception, with: :render_unknown_error
+
 
    def authenticate_request
      Account.reset_current
@@ -23,6 +25,10 @@ class ApplicationController < ActionController::Base
 
   def render_default_error(e)
     render json: { "message": "", "error": e.message }, status: 400 and return
+  end
+
+  def render_unknown_error
+    render json: { "message": "", "error": "unknown failure" }, status: 400 and return
   end
 
 end
