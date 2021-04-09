@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def render_default_error(e)
-    render json: { "message": "", "error": e.message }, status: 403 and return
+    render json: { "message": "", "error": e.message }, status: 400 and return
   end
 
 end
