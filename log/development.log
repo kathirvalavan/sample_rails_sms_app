@@ -1,0 +1,1243 @@
+Started GET "/" for ::1 at 2021-04-09 13:34:38 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 509)
+Completed 200 OK in 23ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 4172)
+
+
+  [1m[35m (30.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTableAccount (20210409082203)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTableAccount (20210409082203)
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE `account` (`id` int NOT NULL, `auth_id` varchar(40), `username` varchar(30), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (18.8ms)[0m  [1m[35mALTER TABLE account ADD PRIMARY KEY (id);[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210409082203')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to PhoneNumber (20210409082834)
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE `phone_number` (`id` int NOT NULL, `number` varchar(40), `account_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (13.2ms)[0m  [1m[35mALTER TABLE phone_number ADD PRIMARY KEY (id);[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210409082834')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-04-09 08:33:37.109261', '2021-04-09 08:33:37.109261')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO account VALUES (1, 20S0KPNOIM, azr1), (2, 54P2EOKQ47, azr2), (3, 9LLV6I4ZWI, azr3), (4, YHWE3HDLPQ, azr4), (5, 6DLH8A25XZ, azr5)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO account (id, auth_id, username) VALUES (1, 20S0KPNOIM, azr1), (2, 54P2EOKQ47, azr2), (3, 9LLV6I4ZWI, azr3), (4, YHWE3HDLPQ, azr4), (5, 6DLH8A25XZ, azr5)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO account ('id', 'auth_id', 'username') VALUES (1, 20S0KPNOIM, azr1), (2, 54P2EOKQ47, azr2), (3, 9LLV6I4ZWI, azr3), (4, YHWE3HDLPQ, azr4), (5, 6DLH8A25XZ, azr5)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO account (id, auth_id, username) VALUES (1, 20S0KPNOIM, azr1)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.3ms)[0m  [1m[32mINSERT INTO `account` (`id`, `auth_id`, `username`, `created_at`, `updated_at`) VALUES (1, '20S0KPNOIM', 'azr1', '2021-04-09 08:48:06.494162', '2021-04-09 08:48:06.494162')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210409083713')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.5ms)[0m  [1m[32mINSERT INTO `account` (`id`, `auth_id`, `username`, `created_at`, `updated_at`) VALUES (1, '20S0KPNOIM', 'azr1', '2021-04-09 09:05:19.112047', '2021-04-09 09:05:19.112047')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7172278550680836810', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to SeedData (20210409083713)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO `account` (`id`, `auth_id`, `username`, `created_at`, `updated_at`) VALUES (1, '20S0KPNOIM', 'azr1', '2021-04-09 09:05:33.024771', '2021-04-09 09:05:33.024771')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.3ms)[0m  [1m[32mINSERT INTO `account` (`id`, `auth_id`, `username`, `created_at`, `updated_at`) VALUES (2, '54P2EOKQ47', 'azr2', '2021-04-09 09:05:33.027978', '2021-04-09 09:05:33.027978')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO `account` (`id`, `auth_id`, `username`, `created_at`, `updated_at`) VALUES (3, '9LLV6I4ZWI', 'azr3', '2021-04-09 09:05:33.030886', '2021-04-09 09:05:33.030886')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO `account` (`id`, `auth_id`, `username`, `created_at`, `updated_at`) VALUES (4, 'YHWE3HDLPQ', 'azr4', '2021-04-09 09:05:33.033735', '2021-04-09 09:05:33.033735')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO `account` (`id`, `auth_id`, `username`, `created_at`, `updated_at`) VALUES (5, '6DLH8A25XZ', 'azr5', '2021-04-09 09:05:33.036393', '2021-04-09 09:05:33.036393')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.3ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (1, '4924195509198', 1, '2021-04-09 09:05:33.043123', '2021-04-09 09:05:33.043123')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (2, '4924195509196', 1, '2021-04-09 09:05:33.046197', '2021-04-09 09:05:33.046197')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (3, '4924195509197', 1, '2021-04-09 09:05:33.049072', '2021-04-09 09:05:33.049072')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (4, '4924195509195', 1, '2021-04-09 09:05:33.051819', '2021-04-09 09:05:33.051819')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (5, '4924195509049', 1, '2021-04-09 09:05:33.054450', '2021-04-09 09:05:33.054450')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (6, '4924195509012', 1, '2021-04-09 09:05:33.057269', '2021-04-09 09:05:33.057269')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.3ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (7, '4924195509193', 1, '2021-04-09 09:05:33.060090', '2021-04-09 09:05:33.060090')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (8, '4924195509029', 1, '2021-04-09 09:05:33.062894', '2021-04-09 09:05:33.062894')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (9, '4924195509192', 1, '2021-04-09 09:05:33.065797', '2021-04-09 09:05:33.065797')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (10, '4924195509194', 1, '2021-04-09 09:05:33.068566', '2021-04-09 09:05:33.068566')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (11, '31297728125', 1, '2021-04-09 09:05:33.071384', '2021-04-09 09:05:33.071384')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (12, '3253280312', 1, '2021-04-09 09:05:33.074191', '2021-04-09 09:05:33.074191')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (13, '3253280311', 1, '2021-04-09 09:05:33.077025', '2021-04-09 09:05:33.077025')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (14, '3253280315', 1, '2021-04-09 09:05:33.079879', '2021-04-09 09:05:33.079879')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (15, '3253280313', 1, '2021-04-09 09:05:33.082650', '2021-04-09 09:05:33.082650')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (16, '3253280329', 1, '2021-04-09 09:05:33.085418', '2021-04-09 09:05:33.085418')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (17, '441224459508', 1, '2021-04-09 09:05:33.088093', '2021-04-09 09:05:33.088093')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (18, '441224980086', 1, '2021-04-09 09:05:33.090685', '2021-04-09 09:05:33.090685')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (19, '441224980087', 1, '2021-04-09 09:05:33.093167', '2021-04-09 09:05:33.093167')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (20, '441224980096', 1, '2021-04-09 09:05:33.095658', '2021-04-09 09:05:33.095658')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (21, '441224980098', 1, '2021-04-09 09:05:33.098082', '2021-04-09 09:05:33.098082')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (22, '441224980099', 1, '2021-04-09 09:05:33.100505', '2021-04-09 09:05:33.100505')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (23, '441224980100', 1, '2021-04-09 09:05:33.103231', '2021-04-09 09:05:33.103231')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (24, '441224980094', 2, '2021-04-09 09:05:33.106003', '2021-04-09 09:05:33.106003')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (25, '441224459426', 2, '2021-04-09 09:05:33.108791', '2021-04-09 09:05:33.108791')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (26, '13605917249', 2, '2021-04-09 09:05:33.111486', '2021-04-09 09:05:33.111486')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (27, '441224459548', 2, '2021-04-09 09:05:33.114278', '2021-04-09 09:05:33.114278')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (28, '441224459571', 2, '2021-04-09 09:05:33.116993', '2021-04-09 09:05:33.116993')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (29, '441224459598', 2, '2021-04-09 09:05:33.119708', '2021-04-09 09:05:33.119708')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (30, '13605895047', 2, '2021-04-09 09:05:33.122425', '2021-04-09 09:05:33.122425')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (31, '14433600975', 2, '2021-04-09 09:05:33.125114', '2021-04-09 09:05:33.125114')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (32, '16052299352', 2, '2021-04-09 09:05:33.127656', '2021-04-09 09:05:33.127656')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.3ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (33, '13602092244', 2, '2021-04-09 09:05:33.130573', '2021-04-09 09:05:33.130573')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (34, '441224459590', 2, '2021-04-09 09:05:33.133202', '2021-04-09 09:05:33.133202')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (35, '441224459620', 2, '2021-04-09 09:05:33.135656', '2021-04-09 09:05:33.135656')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (36, '441224459660', 2, '2021-04-09 09:05:33.137996', '2021-04-09 09:05:33.137996')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (37, '234568266473', 2, '2021-04-09 09:05:33.140546', '2021-04-09 09:05:33.140546')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (38, '441224980091', 2, '2021-04-09 09:05:33.142995', '2021-04-09 09:05:33.142995')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (39, '441224980092', 2, '2021-04-09 09:05:33.145483', '2021-04-09 09:05:33.145483')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (40, '441224980089', 2, '2021-04-09 09:05:33.147929', '2021-04-09 09:05:33.147929')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (41, '441224459482', 2, '2021-04-09 09:05:33.150306', '2021-04-09 09:05:33.150306')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (42, '441224980093', 2, '2021-04-09 09:05:33.152744', '2021-04-09 09:05:33.152744')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (43, '441887480051', 2, '2021-04-09 09:05:33.155154', '2021-04-09 09:05:33.155154')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (44, '441873440028', 2, '2021-04-09 09:05:33.157641', '2021-04-09 09:05:33.157641')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (45, '441873440017', 3, '2021-04-09 09:05:33.160068', '2021-04-09 09:05:33.160068')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (46, '441970450009', 3, '2021-04-09 09:05:33.162530', '2021-04-09 09:05:33.162530')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (47, '441235330075', 3, '2021-04-09 09:05:33.165013', '2021-04-09 09:05:33.165013')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (48, '441235330053', 3, '2021-04-09 09:05:33.167595', '2021-04-09 09:05:33.167595')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (49, '441235330044', 3, '2021-04-09 09:05:33.170098', '2021-04-09 09:05:33.170098')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (50, '441235330078', 3, '2021-04-09 09:05:33.172806', '2021-04-09 09:05:33.172806')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.3ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (51, '34881254103', 3, '2021-04-09 09:05:33.175391', '2021-04-09 09:05:33.175391')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (52, '61871112946', 3, '2021-04-09 09:05:33.177866', '2021-04-09 09:05:33.177866')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (53, '61871112915', 3, '2021-04-09 09:05:33.183072', '2021-04-09 09:05:33.183072')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (54, '61881666904', 3, '2021-04-09 09:05:33.185648', '2021-04-09 09:05:33.185648')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (55, '61881666939', 3, '2021-04-09 09:05:33.188352', '2021-04-09 09:05:33.188352')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (56, '61871112913', 3, '2021-04-09 09:05:33.190924', '2021-04-09 09:05:33.190924')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (57, '61871112901', 3, '2021-04-09 09:05:33.193558', '2021-04-09 09:05:33.193558')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (58, '61871112938', 3, '2021-04-09 09:05:33.196296', '2021-04-09 09:05:33.196296')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (59, '61871112934', 3, '2021-04-09 09:05:33.198835', '2021-04-09 09:05:33.198835')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (60, '61871112902', 3, '2021-04-09 09:05:33.201487', '2021-04-09 09:05:33.201487')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (61, '61881666926', 4, '2021-04-09 09:05:33.203963', '2021-04-09 09:05:33.203963')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (62, '61871705936', 4, '2021-04-09 09:05:33.206356', '2021-04-09 09:05:33.206356')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (63, '61871112920', 4, '2021-04-09 09:05:33.208695', '2021-04-09 09:05:33.208695')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (64, '61881666923', 4, '2021-04-09 09:05:33.211168', '2021-04-09 09:05:33.211168')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (65, '61871112947', 4, '2021-04-09 09:05:33.213639', '2021-04-09 09:05:33.213639')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (66, '61871112948', 4, '2021-04-09 09:05:33.216049', '2021-04-09 09:05:33.216049')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (67, '61871112921', 4, '2021-04-09 09:05:33.218411', '2021-04-09 09:05:33.218411')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.1ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (68, '61881666914', 4, '2021-04-09 09:05:33.220694', '2021-04-09 09:05:33.220694')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (69, '61881666942', 4, '2021-04-09 09:05:33.223044', '2021-04-09 09:05:33.223044')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.3ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (70, '61871112922', 4, '2021-04-09 09:05:33.225482', '2021-04-09 09:05:33.225482')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (71, '61871232393', 4, '2021-04-09 09:05:33.228107', '2021-04-09 09:05:33.228107')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (72, '61871112916', 5, '2021-04-09 09:05:33.230576', '2021-04-09 09:05:33.230576')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (73, '61881666921', 5, '2021-04-09 09:05:33.233355', '2021-04-09 09:05:33.233355')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (74, '61871112905', 5, '2021-04-09 09:05:33.235981', '2021-04-09 09:05:33.235981')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (75, '61871112937', 5, '2021-04-09 09:05:33.238547', '2021-04-09 09:05:33.238547')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (76, '61361220301', 5, '2021-04-09 09:05:33.241200', '2021-04-09 09:05:33.241200')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (77, '61871112931', 5, '2021-04-09 09:05:33.243921', '2021-04-09 09:05:33.243921')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (78, '61871112939', 5, '2021-04-09 09:05:33.246652', '2021-04-09 09:05:33.246652')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhoneNumber Create (0.2ms)[0m  [1m[32mINSERT INTO `phone_number` (`id`, `number`, `account_id`, `created_at`, `updated_at`) VALUES (79, '61871112940', 5, '2021-04-09 09:05:33.249319', '2021-04-09 09:05:33.249319')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210409083713')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7172278550680836810')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-04-09 15:00:01 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 509)
+Completed 200 OK in 23ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4215)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-09 15:01:31 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.1ms | Allocations: 509)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 4215)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-09 15:04:08 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.7ms | Allocations: 509)
+Completed 200 OK in 32ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 4215)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-09 15:07:19 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 18.1ms | Allocations: 509)
+Completed 200 OK in 33ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 4215)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-09 15:10:13 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:10:32 +0530
+  
+NoMethodError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:11:31 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+all here
+Completed 500 Internal Server Error in 3340ms (ActiveRecord: 0.0ms | Allocations: 21203)
+
+
+  
+ActionView::MissingTemplate (Missing template home/index, application/index with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:11:56 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+all here
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 974)
+
+
+  
+ActionView::MissingTemplate (Missing template home/index, application/index with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:12:08 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+all here
+Completed 500 Internal Server Error in 22849ms (ActiveRecord: 0.0ms | Allocations: 11608)
+
+
+  
+ActionView::MissingTemplate (Missing template home/index, application/index with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:12:45 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+all here
+Completed 500 Internal Server Error in 4730ms (ActiveRecord: 0.0ms | Allocations: 11531)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:8:in `authenticate_request'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:15:09 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+all here
+Completed 500 Internal Server Error in 22025ms (ActiveRecord: 0.0ms | Allocations: 12280)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:8:in `authenticate_request'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:15:41 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+all here
+Completed 500 Internal Server Error in 553826ms (Allocations: 66161)
+
+
+  
+ActionView::MissingTemplate (Missing template home/index, application/index with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:25:21 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController::AuthenticationFailed
+Did you mean?  ApplicationController::AUTHENTICITY_TOKEN_LENGTH):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:26:55 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController::AuthenticationFailed
+Did you mean?  ApplicationController::AUTHENTICITY_TOKEN_LENGTH):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:33:19 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms | Allocations: 6495)
+
+
+  
+NameError (uninitialized constant ApplicationController::AuthenticationFailed
+Did you mean?  ApplicationController::AUTHENTICITY_TOKEN_LENGTH):
+  
+app/controllers/application_controller.rb:12:in `authenticate_request'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:33:40 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.8ms | Allocations: 8021)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing, application/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:18:in `render_nothing_error'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:34:09 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.6ms | Allocations: 2785)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing, application/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:18:in `render_nothing_error'
+Started GET "/" for 127.0.0.1 at 2021-04-09 15:34:20 +0530
+Started GET "/" for 127.0.0.1 at 2021-04-09 15:34:40 +0530
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:34:45 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.8ms | Allocations: 1716)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing, application/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:18:in `render_nothing_error'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:35:23 +0530
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 3597ms (ActiveRecord: 1.7ms | Allocations: 16072)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing, application/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:19:in `render_nothing_error'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:36:27 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 2226ms (ActiveRecord: 2.2ms | Allocations: 21278)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing, application/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:19:in `render_nothing_error'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:37:12 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 2098ms (ActiveRecord: 1.8ms | Allocations: 21278)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing, application/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:19:in `render_nothing_error'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:38:47 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms | Allocations: 7675)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:18:in `render_nothing_error'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:39:17 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.8ms | Allocations: 7675)
+
+
+  
+ActionView::MissingTemplate (Missing template home/nothing with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/application_controller.rb:18:in `render_nothing_error'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:40:28 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = '123' AND `account`.`auth_id` = '123'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 33)
+Completed 403 Forbidden in 22ms (Views: 5.5ms | ActiveRecord: 1.9ms | Allocations: 6432)
+
+
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:46:01 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.9ms | Allocations: 9541)
+
+
+  
+NoMethodError (undefined method `set_current' for #<Account::ActiveRecord_Relation:0x00007f937e8c72d8>):
+  
+app/controllers/application_controller.rb:13:in `authenticate_request'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:46:22 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.8ms | Allocations: 8975)
+
+
+  
+NoMethodError (undefined method `[]=' for Thread:Class):
+  
+app/models/account.rb:5:in `set_current'
+app/controllers/application_controller.rb:13:in `authenticate_request'
+Started GET "/sms" for 127.0.0.1 at 2021-04-09 15:46:49 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"sms"}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.8ms | Allocations: 11210)
+
+
+  
+ActionView::MissingTemplate (Missing template home/index, application/index with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/outbound/sms" for 127.0.0.1 at 2021-04-09 15:47:27 +0530
+Processing by SmsController#outbound_sms as */*
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms | Allocations: 2342)
+
+
+  
+ActionView::MissingTemplate (Missing template sms/outbound_sms, application/outbound_sms with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/sms_controller.rb:7:in `outbound_sms'
+Started GET "/outbound/sms" for 127.0.0.1 at 2021-04-09 15:47:35 +0530
+Processing by SmsController#outbound_sms as */*
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.8ms | Allocations: 1524)
+
+
+  
+ActionView::MissingTemplate (Missing template sms/outbound_sms, application/outbound_sms with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/uvarajadurairaj/myfiles/sample-app/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/uvarajadurairaj/.rvm/gems/ruby-2.5.5/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/sms_controller.rb:7:in `outbound_sms'
+Started GET "/outbound/sms" for 127.0.0.1 at 2021-04-09 15:47:57 +0530
+Processing by SmsController#outbound_sms as */*
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 29)
+Completed 200 OK in 10ms (Views: 1.2ms | ActiveRecord: 3.0ms | Allocations: 5266)
+
+
+Started GET "/outbound/sms" for 127.0.0.1 at 2021-04-09 15:48:02 +0530
+Processing by SmsController#outbound_sms as */*
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_request'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 28)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1050)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:35:50 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/inbound/sms"):
+  
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:36:18 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 511)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.3.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.3.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.3.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:37:53 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.6ms | Allocations: 9967)
+
+
+  
+NameError (uninitialized constant SmsController::STRING_TYPE
+Did you mean?  String):
+  
+app/controllers/sms_controller.rb:16:in `validation_params_inbounds_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:38:35 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.9ms | Allocations: 10299)
+
+
+  
+NameError (uninitialized constant SmsController::DataInvalidError):
+  
+app/controllers/sms_controller.rb:23:in `rescue in validation_params_inbounds_sms'
+app/controllers/sms_controller.rb:21:in `validation_params_inbounds_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:39:23 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.6ms | Allocations: 9971)
+
+
+  
+NameError (uninitialized constant DataValidator::DataInvalidError
+Did you mean?  DataValidator):
+  
+lib/data_validator.rb:16:in `block in validate'
+lib/data_validator.rb:12:in `each'
+lib/data_validator.rb:12:in `validate'
+app/controllers/sms_controller.rb:22:in `validation_params_inbounds_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:39:43 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.7ms | Allocations: 8879)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  
+app/controllers/sms_controller.rb:24:in `rescue in validation_params_inbounds_sms'
+app/controllers/sms_controller.rb:21:in `validation_params_inbounds_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:41:18 +0530
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Completed 500 Internal Server Error in 19312ms (ActiveRecord: 3.5ms | Allocations: 33218)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  
+app/controllers/sms_controller.rb:25:in `rescue in validation_params_inbounds_sms'
+app/controllers/sms_controller.rb:21:in `validation_params_inbounds_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:42:00 +0530
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Completed 500 Internal Server Error in 2361ms (ActiveRecord: 3.7ms | Allocations: 18143)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  
+app/controllers/sms_controller.rb:25:in `rescue in validation_params_inbounds_sms'
+app/controllers/sms_controller.rb:21:in `validation_params_inbounds_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:42:22 +0530
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 28)
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 200 OK in 2400ms (Views: 1.8ms | ActiveRecord: 3.4ms | Allocations: 18706)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:43:36 +0530
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 10ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 5317)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:49:40 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+here are the options {:attribute=>"from", :failed_validation=>:required}
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 25ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 8653)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:54:13 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 21ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 8624)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:54:54 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 12ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 5313)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:55:08 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1346)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:56:39 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 14111ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 29607)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:57:15 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 32736ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 25075)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:59:11 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 33507ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 28630)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:59:49 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 10ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 5388)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 16:59:51 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1388)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:00:09 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 28707ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 28048)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:00:52 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 11ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 5371)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:02:59 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 15341ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 25401)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:03:27 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 2974ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 21979)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:03:50 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 22ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 8673)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:04:22 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 22ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 8673)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:04:55 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "sm"=>{"from"=>"91983435345"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 22ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 8676)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:05:10 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "sm"=>{"from"=>"91983435345", "to"=>"91983435346"}}
+  [1m[36mAccount Load (3.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 7ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 1734)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:06:08 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "sm"=>{"from"=>"91983435345", "to"=>"91983435346"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 10ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 5396)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:32:24 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "sm"=>{"from"=>"91983435345", "to"=>"91983435346"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate_request'
+Filter chain halted as :validation_params_inbounds_sms rendered or redirected
+Completed 403 Forbidden in 21ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 8685)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:32:37 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (3.5ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate_request'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 3.5ms | Allocations: 2025)
+
+
+  
+NoMethodError (undefined method `>=' for nil:NilClass):
+  
+lib/data_validator.rb:23:in `block in validate'
+lib/data_validator.rb:13:in `each'
+lib/data_validator.rb:13:in `validate'
+app/controllers/sms_controller.rb:25:in `validation_params_inbounds_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:33:28 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate_request'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.0ms | Allocations: 11508)
+
+
+  
+NoMethodError (undefined method `current' for #<Class:0x00007f7fed0b69a8>
+Did you mean?  current_role):
+  
+app/models/concerns/account_scope_concern.rb:4:in `block (2 levels) in <module:AccountScopeConcern>'
+app/controllers/sms_controller.rb:9:in `inbound_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:34:02 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate_request'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.8ms | Allocations: 11519)
+
+
+  
+NoMethodError (undefined method `current' for #<Class:0x00007fd025baf480>
+Did you mean?  current_role):
+  
+app/models/concerns/account_scope_concern.rb:4:in `block (2 levels) in <module:AccountScopeConcern>'
+app/controllers/sms_controller.rb:9:in `inbound_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:34:18 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate_request'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.8ms | Allocations: 11479)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fdbe234b1b8>
+Did you mean?  ids):
+  
+app/models/concerns/account_scope_concern.rb:4:in `block (2 levels) in <module:AccountScopeConcern>'
+app/controllers/sms_controller.rb:9:in `inbound_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:35:15 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM'[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate_request'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.7ms | Allocations: 9541)
+
+
+  
+NoMethodError (undefined method `set_current' for #<Account::ActiveRecord_Relation:0x00007ffb1edf7458>):
+  
+app/controllers/application_controller.rb:15:in `authenticate_request'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:35:41 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM' ORDER BY `account`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+  [1m[36mPhoneNumber Load (0.7ms)[0m  [1m[34mSELECT `phone_number`.* FROM `phone_number` WHERE `phone_number`.`account_id` = 1 AND `phone_number`.`to` = '91983435346'[0m
+  ↳ app/controllers/sms_controller.rb:9:in `inbound_sms'
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 4.6ms | Allocations: 10773)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'phone_number.to' in 'where clause'):
+  
+app/controllers/sms_controller.rb:9:in `inbound_sms'
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:36:12 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM' ORDER BY `account`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+  [1m[36mPhoneNumber Load (0.8ms)[0m  [1m[34mSELECT `phone_number`.* FROM `phone_number` WHERE `phone_number`.`account_id` = 1 AND `phone_number`.`number` = '91983435346'[0m
+  ↳ app/controllers/sms_controller.rb:9:in `inbound_sms'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 29)
+Completed 403 Forbidden in 17ms (Views: 1.3ms | ActiveRecord: 4.9ms | Allocations: 7587)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:36:48 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"91983435346", "text"=>"hello"}}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM' ORDER BY `account`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+  [1m[36mPhoneNumber Load (0.9ms)[0m  [1m[34mSELECT `phone_number`.* FROM `phone_number` WHERE `phone_number`.`account_id` = 1 AND `phone_number`.`number` = '91983435346'[0m
+  ↳ app/controllers/sms_controller.rb:9:in `inbound_sms'
+Completed 403 Forbidden in 26ms (Views: 0.3ms | ActiveRecord: 4.6ms | Allocations: 10433)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-09 17:37:10 +0530
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"4924195509198", "text"=>"hello", "sm"=>{"from"=>"91983435345", "to"=>"4924195509198", "text"=>"hello"}}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM' ORDER BY `account`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_request'
+  [1m[36mPhoneNumber Load (1.0ms)[0m  [1m[34mSELECT `phone_number`.* FROM `phone_number` WHERE `phone_number`.`account_id` = 1 AND `phone_number`.`number` = '4924195509198'[0m
+  ↳ app/controllers/sms_controller.rb:9:in `inbound_sms'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 4937)
+
+
+Started POST "/inbound/sms" for 127.0.0.1 at 2021-04-10 02:04:16 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SmsController#inbound_sms as */*
+  Parameters: {"from"=>"91983435345", "to"=>"4924195509198", "text"=>"STOP", "sm"=>{"from"=>"91983435345", "to"=>"4924195509198", "text"=>"STOP"}}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `account`.* FROM `account` WHERE `account`.`username` = 'azr1' AND `account`.`auth_id` = '20S0KPNOIM' ORDER BY `account`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate_request'
+  [1m[36mPhoneNumber Load (0.7ms)[0m  [1m[34mSELECT `phone_number`.* FROM `phone_number` WHERE `phone_number`.`account_id` = 1 AND `phone_number`.`number` = '4924195509198'[0m
+  ↳ app/controllers/sms_controller.rb:11:in `inbound_sms'
+Completed 200 OK in 55ms (Views: 0.3ms | ActiveRecord: 5.7ms | Allocations: 11716)
+
+
