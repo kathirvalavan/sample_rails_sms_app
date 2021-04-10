@@ -42,7 +42,7 @@ class SmsController < ApplicationController
     begin
       DataValidator.new(validations).validate(params.permit!.to_h)
     rescue CustomErrors::DataInvalidError => e
-      render json: { "message": "", "error": e.message }, status: 403 and return
+      render json: { "message": "", "error": e.message }, status: 400 and return
     end
 
   end
@@ -57,7 +57,7 @@ class SmsController < ApplicationController
     begin
       DataValidator.new(validations).validate(params.permit!.to_h)
     rescue CustomErrors::DataInvalidError => e
-      render json: { "message": "", "error": e.message }, status: 403 and return
+      render json: { "message": "", "error": e.message }, status: 400 and return
     end
   end
 

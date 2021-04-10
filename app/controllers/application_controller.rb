@@ -2,9 +2,10 @@ class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
   before_action :authenticate_request
 
+  rescue_from StandardError, with: :render_unknown_error
   rescue_from CustomErrors::AuthenticationFailed, with: :render_nothing_error
   rescue_from CustomErrors::DefaultError, with: :render_default_error
-  rescue_from Exception, with: :render_unknown_error
+
 
 
    def authenticate_request
@@ -16,6 +17,9 @@ class ApplicationController < ActionController::Base
        account = Account.where(username: uname, auth_id: pwd).first
        raise CustomErrors::AuthenticationFailed if account.blank?
        account.set_current
+     rescue Exception => e
+       raise CustomErrors::AuthenticationFailed
+       return false
      end
    end
 
