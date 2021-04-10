@@ -23,6 +23,11 @@ module SmsModule
       50
     end
 
+    def clear_usage
+      identifier = get_identifier
+      $redis_client.del(identifier)
+    end
+
     def get_identifier
       "NumberUsageThrottler:#{Account.current.id}:#{@number}"
     end

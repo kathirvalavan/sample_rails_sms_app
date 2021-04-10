@@ -26,3 +26,10 @@ rails webpacker:install
 9. rake db:migrate
 10. bundle install
 11. rails s
+
+Test cases:
+
+bundle exec rspec spec/sms_controller_spec.rb
+
+RAILS_ENV=test bundle exec rspec spec/data_validator_spec.rb
+RAILS_ENV=test bundle exec rspec spec/number_usage_throttler_spec.rb
