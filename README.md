@@ -33,3 +33,5 @@ bundle exec rspec spec/sms_controller_spec.rb
 
 RAILS_ENV=test bundle exec rspec spec/data_validator_spec.rb
 RAILS_ENV=test bundle exec rspec spec/number_usage_throttler_spec.rb
+RAILS_ENV=test bundle exec rspec spec/sms_validator_spec.rb
+RAILS_ENV=test bundle exec rspec spec/sms_util_spec.rb

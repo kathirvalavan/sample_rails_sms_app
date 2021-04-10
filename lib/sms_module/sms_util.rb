@@ -18,6 +18,11 @@ module SmsModule
       $redis_client.exists(key) == true
     end
 
+    def self.remove_from_stop_list(account_id, from , to)
+      key =  SmsModule::Constants::ACCOUNT_TEMP_STOP_NUMBERS % { account_id: account_id, from: from, to: to }
+      $redis_client.del(key)
+    end
+
 
   end
 end
